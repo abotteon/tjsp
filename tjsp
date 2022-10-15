@@ -1,0 +1,17 @@
+library(tjsp)
+
+baixar_cjsg(livre="feminicídio",diretorio=".")
+
+tabela <- ler_cjsg(diretorio=".")
+
+baixar_cposg(tabela$processo)
+
+dados<-ler_dados_cposg(diretorio = ".")
+
+partes <- ler_partes_cposg(diretorio = ".")
+
+andamento <- ler_movimentacao_cposg(diretorio = ".")
+
+entrada <- ler_entrada_cposg(diretorio = ".")
+
+decisao <- ler_decisoes_cposg(diretorio = ".")
